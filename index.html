@@ -7,21 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Admin-Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="header">
             <div class="search">
-                <img src="./images/magnify.svg" alt="Search">
+                <img class="search-icon" src="./images/magnify.svg" alt="Search">
                 <input type="text">
-                <img src="./images/bell-ring.svg" alt="Notification Bell">
-                <img src="./images/kuromi-profile-picture.jpg" alt="Profile Picture">
+                <img class="search-icon" src="./images/bell-ring.svg" alt="Notification Bell">
+                <img id="search-pfp" src="./images/kuromi-profile-picture.jpg" alt="Profile Picture">
                 <div>Morgan Oakley</div>
             </div>
             <div class="nav">
-                <img src="./images/kuromi-profile-picture.jpg" alt="Profile Picture">
-                <div>Hi there, <span>Morgan Oakley (@morgan)</span></div>
+                <div class="user">
+                    <img src="./images/kuromi-profile-picture.jpg" alt="Profile Picture">
+                    <div>Hi there, <br> <span style="font-size: 1.5rem;">Morgan Oakley (@morgan)</span></div>
+                </div>
                 <div class="links">
                     <ul>
                         <li><button><a href="#">New</a></button></li>
