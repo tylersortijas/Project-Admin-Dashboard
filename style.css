@@ -28,7 +28,7 @@ a {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
     box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -38,6 +38,15 @@ a {
     grid-template-columns: auto 1fr auto auto auto;
     align-items: center;
     gap: 20px;
+}
+
+.search input {
+    border: none;
+    background-color: rgb(82, 82, 82, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    height: 28px;
 }
 
 .search-icon {
@@ -58,6 +67,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    align-self: flex-start;
 }
 
 .user {
@@ -104,6 +114,7 @@ gap: 20px;
     color: var(--white-color);
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    padding: 20px 0 0 20px;
 }
 
 .sidebar img {
@@ -111,16 +122,37 @@ gap: 20px;
 }
 
 .title-sidebar {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-left: 5px;
 }
 
 .title-sidebar img {
-    width: 10%;
+    width: 50px;
 }
 
 .home-sidebar img,
 .settings-sidebar img {
     width: 30px;
+}
+
+.sidebar ul {
+    padding: 10px;
+}
+
+.sidebar ul > li {
+    padding: 10px 0;
+    list-style-type: none;
+    font-size: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
 }
 
 /* Content Section */
@@ -129,8 +161,109 @@ gap: 20px;
     background-color: var(--content-color);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 40px 25px;
+}
+
+.project-container {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.head {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.project-container article {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 20px;
+}
+
+.project-container .projects {
+    padding: 20px;
+    background: var(--white-color);
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    display: grid;
+}
+
+.projects > div:last-of-type {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: end;
+    justify-content: end;
+    gap: 10px;
+}
+
+.projects > div:first-line {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
 }
 
 .projects img {
     width: 30px;
+}
+
+.announcements {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements article {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.first-line {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.trending {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.trending article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.trending article > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 25px;
+    gap: 20px;
+    font-size: 18px;
+    padding-bottom: 20px;
+    flex: 1;
+}
+
+.trending article > div > img {
+    border-radius: 50%;
+    width: 50px;
 }
